@@ -1,9 +1,7 @@
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/User');
 
-// Google Strategy
 passport.use(
   new GoogleStrategy(
     {
@@ -23,7 +21,7 @@ passport.use(
             avatar: profile.photos[0]?.value,
           });
         }
-
+        // No tokens needed — we only use Google for identity, not Drive
         return done(null, user);
       } catch (error) {
         return done(error, null);
