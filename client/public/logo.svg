@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFD0B8"/>
+      <stop offset="100%" stop-color="#cfc0a6"/>
+    </linearGradient>
+
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#222831"/>
+      <stop offset="100%" stop-color="#2e3540"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0a0d11" flood-opacity="0.5"/>
+    </filter>
+
+    <clipPath id="cardClip">
+      <rect x="14" y="10" width="92" height="100" rx="14" ry="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card — warm cream background, fully visible on dark pages -->
+  <rect x="14" y="10" width="92" height="100" rx="14" ry="14" fill="url(#cardGrad)" filter="url(#shadow)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="14" y="10" width="92" height="100" rx="14" ry="14" fill="none" stroke="#c0aa8e" stroke-width="1.2"/>
+
+  <!-- Bookmark ribbon — dark, punches against cream card -->
+  <path
+    d="M36 10 L36 68 L60 54 L84 68 L84 10 Z"
+    fill="url(#ribbonGrad)"
+    clip-path="url(#cardClip)"
+  />
+
+  <!-- Ribbon notch shadow -->
+  <path
+    d="M36 68 L60 54 L84 68 L84 63 L60 49 L36 63 Z"
+    fill="#1a1e24"
+    opacity="0.5"
+    clip-path="url(#cardClip)"
+  />
+
+  <!-- Thin spine highlight on ribbon -->
+  <line x1="60" y1="10" x2="60" y2="51" stroke="#393E46" stroke-width="1" opacity="0.4" clip-path="url(#cardClip)"/>
+
+  <!-- Editorial ruled lines on lower card area — dark on cream -->
+  <line x1="28" y1="80" x2="92" y2="80" stroke="#948979" stroke-width="1.2" opacity="0.5"/>
+  <line x1="28" y1="90" x2="78" y2="90" stroke="#948979" stroke-width="1.2" opacity="0.35"/>
+  <line x1="28" y1="100" x2="86" y2="100" stroke="#948979" stroke-width="1.2" opacity="0.2"/>
+
+  <!-- Dot accent -->
+  <circle cx="28" cy="80" r="2" fill="#948979" opacity="0.6"/>
+  <circle cx="28" cy="90" r="2" fill="#948979" opacity="0.4"/>
+</svg>
