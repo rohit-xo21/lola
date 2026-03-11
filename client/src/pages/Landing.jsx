@@ -403,7 +403,6 @@ export default function Landing() {
           <img src="/logobrand.svg" alt="Lola" style={{ maxWidth: '160px', height: '46px', display: 'block' }} />
           </div>
           <div className="l-nav-links">
-            <Link to="/login" className="l-nav-ghost">Sign in</Link>
             <Link to="/login" className="l-nav-cta">
               Get started <ArrowRight size={12} />
             </Link>
