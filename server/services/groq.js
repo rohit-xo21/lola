@@ -12,7 +12,7 @@ Return this exact JSON:
   "title": "clean concise title under 80 chars that captures the essence of the content with caps and no special formatting",
   "summary": "2-4 sentences capturing the core idea and why it matters",
   "key_points": ["up to 6 short bullet points of key takeaways"],
-  "tags": ["up to 8 lowercase tags representing the overall topic, domain, and type of content — not specific details, names, or inner facts. E.g. for a resume: ['resume', 'career', 'software-engineering']. For a research paper on neural nets: ['machine-learning', 'research', 'deep-learning']. Use hyphens for multi-word tags."],
+  "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, news, research, tutorial, or similar broad categories. Pick what best fits the content. Use lowercase."],
   "category": "one of: article | tutorial | video | recipe | paper | tool | inspiration | other",
   "reading_time_minutes": <integer>
 }`;
@@ -26,14 +26,14 @@ ${content.slice(0, 8000)}
 {
   "title": "short descriptive title",
   "summary": "one sentence summary",
-  "tags": ["up to 6 lowercase tags representing the whole content and type of the note — not specific details. Use hyphens for multi-word tags. Overall what it is"]
+  "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, news, research, or similar. Use lowercase."]
 }`;
 
 const IMAGE_PROMPT = () => `Describe this image concisely, then return ONLY valid JSON:
 {
   "title": "what this image shows in under 60 chars",
   "summary": "1-2 sentence description",
-  "tags": ["up to 8 relevant tags"]
+  "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, inspiration, or similar. Use lowercase."]
 }`;
 
 async function runGroqPrompt({ apiKey, model = 'llama-3.3-70b-versatile', prompt }) {
