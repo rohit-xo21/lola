@@ -12,6 +12,13 @@ A web application similar to Kakeep for saving and organizing links, photos, and
 - 🎯 Clean and minimal UI
 - ⚡ Fast and lightweight
 
+## Demo
+
+<video width="100%" autoplay muted loop>
+  <source src="./media/demo.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
 ## Tech Stack
 
 ### Frontend
