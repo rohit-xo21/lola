@@ -15,7 +15,8 @@ router.get(
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     const token = generateToken(req.user._id);
-    res.redirect(`${process.env.CLIENT_URL}/oauth/callback?token=${token}`);
+    const clientUrl = process.env.CLIENT_URL || 'https://lola-two.vercel.app';
+    res.redirect(`${clientUrl}/oauth/callback?token=${token}`);
   }
 );
 
