@@ -9,7 +9,7 @@ ${content.slice(0, 28000)}
 
 Return this exact JSON:
 {
-  "title": "clean concise title under 80 chars that captures the essence of the content with caps and no special formatting",
+  "title": "Clean Concise Title Under 80 Chars That Captures The Essence Of The Content With Caps And No Special Formatting",
   "summary": "2-4 sentences capturing the core idea and why it matters",
   "key_points": ["up to 6 short bullet points of key takeaways"],
   "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, news, research, tutorial, or similar broad categories. Pick what best fits the content. Use lowercase."],
@@ -24,14 +24,14 @@ ${content.slice(0, 8000)}
 """
 
 {
-  "title": "short descriptive title",
+  "title": "Short Descriptive Title",
   "summary": "one sentence summary",
   "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, news, research, or similar. Use lowercase."]
 }`;
 
 const IMAGE_PROMPT = () => `Describe this image concisely, then return ONLY valid JSON:
 {
-  "title": "what this image shows in under 60 chars",
+  "title": "What This Image Shows In Under 60 Chars",
   "summary": "1-2 sentence description",
   "tags": ["1-2 generic category tags from: articles, finance, hacks, personal, routine, tech, health, business, design, productivity, tools, inspiration, or similar. Use lowercase."]
 }`;
@@ -74,7 +74,7 @@ async function processImage({ apiKey, model, filename }) {
 Filename: "${filename}"
 
 {
-  "title": "concise descriptive title under 60 chars",
+  "title": "Concise Descriptive Title Under 60 Chars",
   "summary": "1-2 sentences describing what this image likely contains and its purpose",
   "tags": ["up to 8 lowercase tags representing the overall domain, category, and purpose — not specific details. Use hyphens for multi-word tags. E.g. for a screenshot: ['screenshot', 'ui', 'web']. For a photo: ['photo', 'personal']."]
 }`;
